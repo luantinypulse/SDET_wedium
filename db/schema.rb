@@ -20,10 +20,10 @@ ActiveRecord::Schema.define(version: 20180513162516) do
     t.string   "description",     limit: 255
     t.boolean  "favorited",                     default: false
     t.integer  "favorites_count", limit: 4,     default: 0
-    t.datetime "created_at",                                                                          null: false
-    t.datetime "updated_at",                                                                          null: false
-    t.string   "tag_list",        limit: 255,   default: "---\n- Seeding data 1\n- Seeding data 2\n"
-    t.integer  "author_id",       limit: 4,                                                           null: false
+    t.datetime "created_at",                                         null: false
+    t.datetime "updated_at",                                         null: false
+    t.string   "tag_list",        limit: 255,   default: "--- []\n"
+    t.integer  "author_id",       limit: 4,                          null: false
   end
 
   create_table "authors", force: :cascade do |t|
