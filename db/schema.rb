@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180511045232) do
+ActiveRecord::Schema.define(version: 20180513162516) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title",           limit: 255
@@ -19,9 +19,20 @@ ActiveRecord::Schema.define(version: 20180511045232) do
     t.text     "body",            limit: 65535
     t.string   "description",     limit: 255
     t.boolean  "favorited",                     default: false
-    t.integer  "favorites_count", limit: 4
-    t.datetime "created_at",                                    null: false
-    t.datetime "updated_at",                                    null: false
+    t.integer  "favorites_count", limit: 4,     default: 0
+    t.datetime "created_at",                                                                          null: false
+    t.datetime "updated_at",                                                                          null: false
+    t.string   "tag_list",        limit: 255,   default: "---\n- Seeding data 1\n- Seeding data 2\n"
+    t.integer  "author_id",       limit: 4,                                                           null: false
+  end
+
+  create_table "authors", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.string   "bio",        limit: 255
+    t.string   "image",      limit: 255
+    t.boolean  "following",              default: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
   end
 
 end

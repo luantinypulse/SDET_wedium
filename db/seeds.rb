@@ -5,3 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+# Articel Seed data
+#  -- WHY THERE'S ERROR TYPE MISSMATCH when NO NULL: FALSE in Article ??? 
+Article.create(title: 'Seed Data 1', slug: 'seeded-date', body: 'Seeding data', description: 'Seeding data description', author_id: 1)
+Article.create(title: 'Seed Data 2', slug: 'seeded-date', body: 'Seeding data', description: 'Seeding data description', author_id: 2)
+Article.create(title: 'Seed Data 3', slug: 'seeded-date', body: 'Seeding data', description: 'Seeding data description', author_id: 3)
+
+# Author seed data
+Author.create(name: 'Luan Ta')
+Author.create(name: 'Ngoc Nguyen')
+Author.create(name: 'Tuan Tran')
