@@ -13,7 +13,9 @@ User.create(name: 'Tuan Tran')
 
 # Articel Seed data
 #  -- WHY THERE'S ERROR TYPE MISSMATCH when NO NULL: FALSE in Article ??? 
-Article.create(title: 'Seed Data 1', slug: 'seeded-date', body: 'Seeding data', description: 'Seeding data description', author_id: User.first.id)
-Article.create(title: 'Seed Data 2', slug: 'seeded-date', body: 'Seeding data', description: 'Seeding data description', author_id: User.second.id)
-Article.create(title: 'Seed Data 3', slug: 'seeded-date', body: 'Seeding data', description: 'Seeding data description', author_id: User.third.id)
+Article.create(title: 'Seed Data 1', slug: 'seeded-date', body: 'Seeding data', description: 'Seeding data description', user_id: User.first.id)
+Article.create(title: 'Seed Data 2', slug: 'seeded-date', body: 'Seeding data', description: 'Seeding data description', user_id: User.second.id)
+Article.create(title: 'Seed Data 3', slug: 'seeded-date', body: 'Seeding data', description: 'Seeding data description', user_id: User.third.id)
 
+# Seed Favorited
+Favorite.create(user_id: 1, article_id: 1)
