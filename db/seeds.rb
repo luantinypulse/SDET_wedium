@@ -7,13 +7,13 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Author seed data
-Author.create(name: 'Luan Ta')
-Author.create(name: 'Ngoc Nguyen')
-Author.create(name: 'Tuan Tran')
+User.create(name: 'Luan Ta')
+User.create(name: 'Ngoc Nguyen')
+User.create(name: 'Tuan Tran')
 
 # Articel Seed data
 #  -- WHY THERE'S ERROR TYPE MISSMATCH when NO NULL: FALSE in Article ??? 
-Article.create(title: 'Seed Data 1', slug: 'seeded-date', body: 'Seeding data', description: 'Seeding data description', author_id: Author.first.id)
-Article.create(title: 'Seed Data 2', slug: 'seeded-date', body: 'Seeding data', description: 'Seeding data description', author_id: Author.second.id)
-Article.create(title: 'Seed Data 3', slug: 'seeded-date', body: 'Seeding data', description: 'Seeding data description', author_id: Author.third.id)
+Article.create(title: 'Seed Data 1', slug: 'seeded-date', body: 'Seeding data', description: 'Seeding data description', author_id: User.first.id)
+Article.create(title: 'Seed Data 2', slug: 'seeded-date', body: 'Seeding data', description: 'Seeding data description', author_id: User.second.id)
+Article.create(title: 'Seed Data 3', slug: 'seeded-date', body: 'Seeding data', description: 'Seeding data description', author_id: User.third.id)
 

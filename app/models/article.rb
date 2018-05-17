@@ -1,5 +1,5 @@
 class Article < ActiveRecord::Base
-  belongs_to :author
+  belongs_to :user
   serialize :tag_list
 
   def self.author_json
