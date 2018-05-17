@@ -1,6 +1,10 @@
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.all
+    if params[:author].present?
+      @articles = Article.author_by(params[:author])
+    else
+      @articles = Article.all
+    end  
   end
 
   def show
