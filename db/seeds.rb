@@ -19,3 +19,17 @@ Article.create(title: 'Seed Data 3', slug: 'seeded-date', body: 'Seeding data', 
 
 # Seed Favorited
 Favorite.create(user_id: 1, article_id: 1)
+Favorite.create(user_id: 1, article_id: 2)
+Favorite.create(user_id: 2, article_id: 1)
+
+# Tags
+Tag.create(name: "tagging 1")
+Tag.create(name: "tagging 2")
+
+# Tagging
+Tagging.create(tag_id: Tag.first.id, article_id: Article.first.id)
+Tagging.create(tag_id: Tag.second.id, article_id: Article.first.id)
+Tagging.create(tag_id: Tag.second.id, article_id: Article.second.id)
+
+
+
