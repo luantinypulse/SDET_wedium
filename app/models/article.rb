@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Article < ActiveRecord::Base
   belongs_to :user
   has_many :favorites
@@ -10,7 +12,7 @@ class Article < ActiveRecord::Base
   end
 
   def self.favorited_by(username)
-    joins(:favorites).where(favorites: {user: User.where(name: username.strip)}) 
+    joins(:favorites).where(favorites: { user: User.where(name: username.strip) })
   end
 
   def self.tag_with(text)

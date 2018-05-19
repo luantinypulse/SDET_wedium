@@ -1,14 +1,16 @@
+# frozen_string_literal: true
+
 class ArticlesController < ApplicationController
   def index
-    if params[:author].present?
-      @articles = Article.author_by(params[:author])
-    elsif params[:favorited].present?
-      @articles = Article.favorited_by(params[:favorited])
-    elsif params[:tag].present?
-      @articles = Article.tag_with(params[:tag])
-    else
-      @articles = Article.all
-    end
+    @articles = if params[:author].present?
+                  Article.author_by(params[:author])
+                elsif params[:favorited].present?
+                  Article.favorited_by(params[:favorited])
+                elsif params[:tag].present?
+                  Article.tag_with(params[:tag])
+                else
+                  Article.all
+                end
   end
 
   def show
